@@ -1,0 +1,168 @@
+:root {
+    --primary-bg-color: #e6f0ff;
+    --header-footer-bg: #00695c;
+    --header-text-color: white;
+    --heading-color: #004225;
+    --link-color: #000000;
+    --box-shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary-bg-color);
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--header-footer-bg);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 6px var(--box-shadow-light);
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    letter-spacing: 0.05em;
+}
+
+header p {
+    margin: 0.5rem 0 0 0;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    opacity: 0.9;
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 1rem auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--box-shadow-light);
+}
+
+h2 {
+    color: var(--heading-color);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--heading-color);
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+ul li a:hover,
+ul li a:focus {
+    color: var(--heading-color);
+    text-decoration: underline;
+}
+
+.Comidas-Tipicas {
+    display: block;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.Comidas-Tipicas img.Imagem {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 250px;
+    height: 180px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--box-shadow-light);
+    object-fit: cover;
+}
+
+.Comidas-Tipicas p {
+    text-align: justify;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+    .Comidas-Tipicas img.Imagem {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .Comidas-Tipicas p {
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.Galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.Galeria img {
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Galeria img:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: var(--header-footer-bg);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 4rem;
+    box-shadow: 0 -4px 6px var(--box-shadow-light);
+}
+
+a:focus {
+    outline: 2px solid var(--heading-color);
+    outline-offset: 2px;
+}
